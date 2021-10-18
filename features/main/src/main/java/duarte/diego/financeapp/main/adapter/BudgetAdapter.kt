@@ -11,9 +11,7 @@ class BudgetAdapter: BaseAdapter<Budget, BudgetAdapter.BudgetViewHolder, ItemBud
     override fun createViewHolderInstance(
         view: AdapterAsyncLayout<ItemBudgetBinding>,
         viewType: Int
-    ): BudgetViewHolder {
-        TODO("Not yet implemented")
-    }
+    )  = BudgetViewHolder(view)
 
     override val bindingInflater: (View) -> ItemBudgetBinding = { ItemBudgetBinding.bind(it) }
 
