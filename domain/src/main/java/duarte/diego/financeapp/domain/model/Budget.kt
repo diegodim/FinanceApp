@@ -2,13 +2,17 @@ package duarte.diego.financeapp.domain.model
 
 import duarte.diego.financeapp.commons.enums.BudgetCategory
 import duarte.diego.financeapp.commons.enums.BudgetType
+import java.util.*
+import kotlin.collections.ArrayList
 
 data class Budget(
     var id: Int = 0,
     var title: String = "",
     var value: Number = 0,
     var type: BudgetType = BudgetType.Income,
-    var category: BudgetCategory = BudgetCategory.Others
+    var category: BudgetCategory = BudgetCategory.Others,
+    var date: Date = Date()
+
 ){
     companion object{
         val FAKE by lazy {

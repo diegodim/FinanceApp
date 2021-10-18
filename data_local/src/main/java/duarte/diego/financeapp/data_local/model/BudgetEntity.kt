@@ -4,6 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import duarte.diego.financeapp.commons.enums.BudgetCategory
 import duarte.diego.financeapp.commons.enums.BudgetType
+import java.util.*
 
 @Entity(tableName = "budget")
 data class BudgetEntity(
@@ -12,5 +13,6 @@ data class BudgetEntity(
     var title: String = "",
     var value: Number = 0,
     var type: BudgetType = BudgetType.Income,
-    var category: BudgetCategory = BudgetCategory.Others
+    var category: BudgetCategory = BudgetCategory.Others,
+    var date: Date = Date()
 )

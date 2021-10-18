@@ -13,7 +13,8 @@ object BudgetEntityMapper: BaseLocalMapper<BudgetEntity, Budget> {
         title = domain.title,
         value = domain.value,
         type = domain.type,
-        category = domain.category
+        category = domain.category,
+        date = domain.date
     )
 
     override fun fromLocal(local: BudgetEntity) = Budget (
@@ -21,7 +22,8 @@ object BudgetEntityMapper: BaseLocalMapper<BudgetEntity, Budget> {
         title = local.title,
         value = local.value,
         type = local.type,
-        category = local.category
+        category = local.category,
+        date = local.date
     )
 
 }
