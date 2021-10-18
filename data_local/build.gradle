@@ -8,6 +8,15 @@ apply from: "$rootProject.projectDir/android-common.gradle"
 
 dependencies {
     implementation(project(Modules.dataModule))
+    implementation(project(Modules.commons))
+    implementation(project(Modules.domainModule))
+
+    implementation(Coroutines.coroutinesCore)
+    implementation(Coroutines.coroutinesAndroid)
+
+    implementation(Room.room)
+    implementation(Room.roomCompiler)
+    implementation(Room.roomKtx)
 
     testImplementation(TestDependencies.jUnit)
 

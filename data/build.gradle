@@ -4,6 +4,11 @@ plugins {
 
 dependencies {
 
+    implementation(project(Modules.domainModule))
+
+    implementation(Coroutines.coroutinesCore)
+    implementation(Coroutines.coroutinesAndroid)
+
     implementation(Kotlin.kotlinStd)
 
     testImplementation(TestDependencies.jUnit)
