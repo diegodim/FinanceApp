@@ -6,6 +6,7 @@ enum class BudgetCategory(s: String) {
     Salary("Salário"),
     Transport("Transporte"),
     Health("Saúde"),
-    Studies("Estudos"),
+    Studies("Estudo"),
+    Bills("Contas"),
     Others("Outros")
 }

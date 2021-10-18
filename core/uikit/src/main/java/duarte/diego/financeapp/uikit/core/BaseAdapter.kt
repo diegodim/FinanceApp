@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseAsyncAdapter<T, V: BaseViewHolder<T>, B>: ListAdapter<T, V>(DiffCallback<T>()) {
+abstract class BaseAdapter<T, V: BaseViewHolder<T>, B>: ListAdapter<T, V>(DiffCallback<T>()) {
 
     abstract fun createViewHolderInstance(view: AdapterAsyncLayout<B>, viewType: Int, ): V
     abstract val bindingInflater: (View) -> B

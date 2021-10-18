@@ -10,6 +10,7 @@ apply from: "$rootProject.projectDir/android-common.gradle"
 dependencies {
 
     implementation(project(Modules.uiKit))
+    implementation(project(Modules.domainModule))
 
     implementation(AndroidCore.androidCore)
     implementation(AndroidCore.appCompat)
