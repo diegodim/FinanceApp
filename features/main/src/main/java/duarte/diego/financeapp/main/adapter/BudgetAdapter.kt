@@ -8,6 +8,7 @@ import duarte.diego.financeapp.uikit.core.BaseAdapter
 import duarte.diego.financeapp.uikit.core.BaseViewHolder
 
 class BudgetAdapter: BaseAdapter<Budget, BudgetAdapter.BudgetViewHolder, ItemBudgetBinding>(){
+
     override fun createViewHolderInstance(
         view: AdapterAsyncLayout<ItemBudgetBinding>,
         viewType: Int
