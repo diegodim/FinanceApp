@@ -1,5 +1,5 @@
 object Version {
-    const val gradleVersion = "7.0.3"
+    const val gradleVersion = "7.0.1"
 }
 
 object Dependencies {
@@ -7,7 +7,7 @@ object Dependencies {
 }
 
 object Kotlin {
-    private const val kotlinVersion = "1.5.30"
+    private const val kotlinVersion = "1.5.21"
     const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     const val kotlinStd = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 }
@@ -16,6 +16,12 @@ object SonarQube {
     private const val sonarVersion = "3.3"
     const val sonarQubePlugin =
         "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$sonarVersion"
+}
+
+object Detekt{
+    private const val detektVersion = "1.18.1"
+    const val detekt =
+        "io.gitlab.arturbosch.detekt:detekt-cli:$detektVersion"
 }
 
 object Modules {

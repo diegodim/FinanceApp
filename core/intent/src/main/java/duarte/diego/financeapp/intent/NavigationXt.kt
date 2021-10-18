@@ -15,6 +15,7 @@ fun NavController.safeNavigateUp() = try {
 fun NavController.safeNavigate(directions: NavDirections, navOptions: NavOptions? = null) = try {
     navigate(directions, navOptions)
 } catch (e: Exception) {
+    e.printStackTrace()
 }
 
 fun Fragment.navigate(directions: NavDirections, navOptions: NavOptions? = null) =

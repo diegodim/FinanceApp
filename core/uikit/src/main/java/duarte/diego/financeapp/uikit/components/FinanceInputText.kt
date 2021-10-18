@@ -2,7 +2,6 @@ package duarte.diego.financeapp.uikit.components
 
 import android.content.Context
 import android.graphics.Typeface
-import android.text.*
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
 import android.view.View
@@ -14,6 +13,7 @@ import android.widget.EditText
 import androidx.core.content.ContextCompat.getColor
 import androidx.core.widget.addTextChangedListener
 import android.os.Parcelable
+import android.text.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.widget.doAfterTextChanged

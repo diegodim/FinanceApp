@@ -24,11 +24,6 @@ import java.lang.ref.WeakReference
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
-/**
- * Monetary mask formats the input to a currency format by the given locale
- *
- * @author Leonardo Rossetto
- */
 class MoneyMask(editText: EditText, private val action: (String) -> Unit = {}) : TextWatcher {
 
     private val mText: WeakReference<EditText> = WeakReference(editText)
@@ -65,6 +60,7 @@ class MoneyMask(editText: EditText, private val action: (String) -> Unit = {}) :
                 mText.get()?.setText(v)
             }
         } catch (e: NumberFormatException) {
+            e.printStackTrace()
         }
 
         mText.get()?.setSelection(mText.get()?.text?.length ?: 0)
