@@ -12,11 +12,11 @@ data class Budget(
 ){
     companion object{
         val FAKE by lazy {
-            ArrayList<Budget>().let {
-                it.add(Budget(1, "Pizza", 59.65, BudgetType.Expense, BudgetCategory.Food))
-                it.add(Budget(2, "Luz", 200, BudgetType.Expense, BudgetCategory.Bills))
-                it.add(Budget(3, "Feira", 650.55, BudgetType.Expense, BudgetCategory.Purchases))
-                it.add(Budget(4, "Salário", 2000, BudgetType.Income, BudgetCategory.Salary))
+            ArrayList<Budget>().apply {
+                add(Budget(1, "Pizza", 59.65, BudgetType.Expense, BudgetCategory.Food))
+                add(Budget(2, "Luz", 200, BudgetType.Expense, BudgetCategory.Bills))
+                add(Budget(3, "Feira", 650.55, BudgetType.Expense, BudgetCategory.Purchases))
+                add(Budget(4, "Salário", 2000, BudgetType.Income, BudgetCategory.Salary))
             }
         }
     }
