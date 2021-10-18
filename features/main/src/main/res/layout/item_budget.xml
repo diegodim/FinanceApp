@@ -19,7 +19,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/itemBudgetTitleTextView"
             style="@style/TextViewContent.Bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -28,12 +28,12 @@
             android:layout_marginEnd="@dimen/spacing_small"
             android:elegantTextHeight="false"
             android:text="Pizza"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintEnd_toStartOf="@+id/itemBudgetDeleteButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/itemBudgetValueTextView"
             style="@style/TextViewContent.Bold.Tall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -41,11 +41,11 @@
             android:layout_marginEnd="@dimen/spacing_normal"
             android:text="-R$ 59,99"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintStart_toStartOf="@+id/itemBudgetTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/itemBudgetTitleTextView" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView3"
+            android:id="@+id/itemBudgetTypeTextView"
             style="@style/TextViewContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,26 +54,26 @@
             android:drawablePadding="@dimen/spacing_small"
             android:text="Comida"
             app:drawableStartCompat="@drawable/ic_food"
-            app:layout_constraintBottom_toTopOf="@+id/divider"
-            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintBottom_toTopOf="@+id/itemBudgetDivider"
+            app:layout_constraintEnd_toStartOf="@+id/itemBudgetDateTextView"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintStart_toStartOf="@+id/itemBudgetTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/itemBudgetValueTextView" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/itemBudgetDateTextView"
             style="@style/TextViewContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="15/10/2021"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/itemBudgetTypeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/itemBudgetValueTextView"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView3" />
+            app:layout_constraintStart_toEndOf="@+id/itemBudgetTypeTextView" />
 
         <View
-            android:id="@+id/divider"
+            android:id="@+id/itemBudgetDivider"
             android:layout_width="match_parent"
             android:layout_height="@dimen/spacing_tiny"
             android:background="@color/colorSecondary"
@@ -82,7 +82,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/itemBudgetDeleteButton"
             android:layout_width="@dimen/spacing_large"
             android:layout_height="@dimen/spacing_large"
             android:layout_marginTop="@dimen/spacing_small"
