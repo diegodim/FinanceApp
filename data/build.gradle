@@ -1,0 +1,10 @@
+plugins {
+    id 'kotlin'
+}
+
+dependencies {
+
+    implementation(Kotlin.kotlinStd)
+
+    testImplementation(TestDependencies.jUnit)
+}

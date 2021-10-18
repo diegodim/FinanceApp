@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="formatter_default_currency">R$ %1$s</string>
+
+    <string name="menu_title_home">Início</string>
+    <string name="menu_title_summary">Sumário</string>
+</resources>

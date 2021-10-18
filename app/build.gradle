@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'org.sonarqube'
+}
+apply from: "$rootProject.projectDir/android-common.gradle"
+
+android {
+    defaultConfig {
+        applicationId "duarte.diego.financeapp"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
+        }
+    }
+}
+
+dependencies {
+    implementation(project(Modules.intentModule))
+    implementation(project(Modules.diModule))
+
+    implementation(AndroidCore.androidCore)
+    implementation(AndroidCore.appCompat)
+    implementation(AndroidCore.material)
+    implementation(AndroidCore.constraintLayout)
+    implementation(AndroidCore.legacy)
+
+    implementation(AndroidNavigation.navigationFragment)
+    implementation(AndroidNavigation.navigationUi)
+
+    testImplementation(TestDependencies.jUnit)
+
+    androidTestImplementation(AndroidTestDependencies.jUnit)
+    androidTestImplementation(AndroidTestDependencies.espresso)
+}

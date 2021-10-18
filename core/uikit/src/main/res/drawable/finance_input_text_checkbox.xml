@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@android:integer/config_shortAnimTime"
+    android:exitFadeDuration="@android:integer/config_shortAnimTime">
+    <item
+        android:id="@+id/unchecked"
+        android:drawable="@drawable/ic_visibility"
+        android:state_checked="false" >
+    </item>
+    <item
+        android:id="@+id/checked"
+        android:drawable="@drawable/ic_visibility_off"
+        android:state_checked="true">
+    </item>
+</selector>

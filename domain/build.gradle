@@ -1,0 +1,18 @@
+plugins {
+    id 'kotlin'
+    id 'kotlin-kapt'
+}
+
+dependencies {
+
+    implementation(project(Modules.commons))
+
+    implementation(Kotlin.kotlinStd)
+
+    implementation(Coroutines.coroutinesCore)
+    implementation(Coroutines.coroutinesAndroid)
+
+    implementation(Koin.koinCore)
+
+    testImplementation(TestDependencies.jUnit)
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Toolbar.TextTitle" parent="Theme.FinanceApp">
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="TextViewContent">
+        <item name="android:elegantTextHeight">true</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="TextViewContent.Bold" parent="TextViewContent">
+        <item name="android:elegantTextHeight">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextViewContent.Bold.Tall" parent="TextViewContent.Bold">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+
+    <style name="TextViewTitle" parent="TextViewContent.Bold.Tall">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_huge</item>
+    </style>
+
+</resources>

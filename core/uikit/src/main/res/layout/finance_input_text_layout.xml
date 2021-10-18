@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/financeInputTextLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <EditText
+        android:id="@+id/financeInputTextContentEditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/finance_input_text_background"
+        android:drawablePadding="@dimen/spacing_small"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/spacing_normal"
+        android:paddingEnd="@dimen/spacing_huge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:hint="Hint"
+        tools:ignore="Autofill,LabelFor,TextFields" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/financeInputTextLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:background="@android:color/white"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/spacing_tiny"
+        android:paddingEnd="@dimen/spacing_tiny"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/financeInputTextErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:textColor="@color/dark_red"
+        android:textSize="@dimen/font_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/financeInputTextContentEditText"
+        tools:text="TextView" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/financeInputTextPasswordToggleImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:button="@drawable/finance_input_text_checkbox"
+        android:text="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/financeInputTextContentEditText"
+        app:layout_constraintEnd_toEndOf="@+id/financeInputTextContentEditText"
+        app:layout_constraintTop_toTopOf="@+id/financeInputTextContentEditText"
+        app:srcCompat="@drawable/ic_visibility" />
+
+</merge>

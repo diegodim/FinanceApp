@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+apply from: "$rootProject.projectDir/android-common.gradle"
+
+dependencies {
+
+    implementation(project(Modules.uiKit))
+
+    implementation(AndroidCore.androidCore)
+    implementation(AndroidCore.appCompat)
+    implementation(AndroidCore.material)
+    implementation(AndroidCore.constraintLayout)
+    implementation(AndroidCore.legacy)
+
+    implementation(Shimmer.shimmer)
+
+    implementation(LifeCycle.viewModelRuntime)
+    implementation(LifeCycle.viewModel)
+    implementation(LifeCycle.liveData)
+    implementation(LifeCycle.lifecycle)
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt(LifeCycle.lifecycleCompiler)
+
+    implementation(Coroutines.coroutinesCore)
+    implementation(Coroutines.coroutinesAndroid)
+
+    implementation(Koin.koinCore)
+    implementation(Koin.koinAndroid)
+
+    implementation(AndroidNavigation.navigationFragment)
+    implementation(AndroidNavigation.navigationUi)
+
+    testImplementation(TestDependencies.jUnit)
+
+    androidTestImplementation(AndroidTestDependencies.jUnit)
+    androidTestImplementation(AndroidTestDependencies.espresso)
+}
