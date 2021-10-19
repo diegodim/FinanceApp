@@ -14,9 +14,15 @@ dependencies {
     implementation(Coroutines.coroutinesCore)
     implementation(Coroutines.coroutinesAndroid)
 
+    implementation(LifeCycle.viewModelRuntime)
+    implementation(LifeCycle.viewModel)
+    implementation(LifeCycle.liveData)
+    implementation(LifeCycle.lifecycle)
+    kapt(LifeCycle.lifecycleCompiler)
+
     implementation(Room.room)
-    implementation(Room.roomCompiler)
     implementation(Room.roomKtx)
+    kapt(Room.roomCompiler)
 
     testImplementation(TestDependencies.jUnit)
 

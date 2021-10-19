@@ -24,7 +24,6 @@ dependencies {
     implementation(LifeCycle.viewModel)
     implementation(LifeCycle.liveData)
     implementation(LifeCycle.lifecycle)
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt(LifeCycle.lifecycleCompiler)
 
     implementation(Coroutines.coroutinesCore)

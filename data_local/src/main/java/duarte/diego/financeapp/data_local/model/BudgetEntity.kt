@@ -11,7 +11,7 @@ data class BudgetEntity(
     @PrimaryKey
     var id: Int = 0,
     var title: String = "",
-    var value: Number = 0,
+    var value: Double = 0.0,
     var type: BudgetType = BudgetType.Income,
     var category: BudgetCategory = BudgetCategory.Others,
     var date: Date = Date()

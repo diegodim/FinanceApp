@@ -17,6 +17,9 @@ dependencies {
     implementation(AndroidCore.androidCore)
     implementation(AndroidCore.legacy)
 
+    implementation(Koin.koinCore)
+    implementation(Koin.koinAndroid)
+
     testImplementation(TestDependencies.jUnit)
 
 

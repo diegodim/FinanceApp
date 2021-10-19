@@ -1,13 +1,13 @@
 package duarte.diego.financeapp.data_local.datasource
 
-import duarte.diego.financeapp.data.datasource.local.BudgetDataLocalSource
+import duarte.diego.financeapp.data.datasource.local.BudgetLocalDataSource
 import duarte.diego.financeapp.data_local.dao.BudgetDao
 import duarte.diego.financeapp.data_local.mapper.BudgetEntityMapper
 import duarte.diego.financeapp.domain.model.Budget
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 
-class BudgetDataSourceImpl(private val dao: BudgetDao): BudgetDataLocalSource {
+class BudgetLocalDataSourceImpl(private val dao: BudgetDao): BudgetLocalDataSource {
 
     override fun getBudgetList() = dao.getBudgetList().map {
         BudgetEntityMapper.fromLocal(it)

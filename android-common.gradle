@@ -1,11 +1,11 @@
 apply from: "$rootProject.projectDir/config/detekt/detekt.gradle"
 android {
-    compileSdk 31
+    compileSdkVersion 31
 
     defaultConfig {
         /*applicationId "duarte.diego.financeapp"*/
-        minSdk 21
-        targetSdk 31
+        minSdkVersion 21
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0.0"
         vectorDrawables.useSupportLibrary = true
@@ -55,13 +55,6 @@ android {
 
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-
-    testOptions {
-        unitTests.returnDefaultValues = true
-        unitTests.all {
-            useJUnitPlatform()
-        }
     }
 
     buildFeatures {

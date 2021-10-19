@@ -32,6 +32,9 @@ dependencies {
     implementation(AndroidNavigation.navigationFragment)
     implementation(AndroidNavigation.navigationUi)
 
+    implementation(Koin.koinCore)
+    implementation(Koin.koinAndroid)
+
     testImplementation(TestDependencies.jUnit)
 
     androidTestImplementation(AndroidTestDependencies.jUnit)
