@@ -1,0 +1,37 @@
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    app:elevation="0dp"
+    app:liftOnScroll="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:padding="0dp"
+        app:titleTextAppearance="@style/Toolbar.TextTitle"
+        app:titleTextColor="@android:color/white">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner"
+            style="@style/SpinnerTheme"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:drawSelectorOnTop="true"
+            android:dropDownWidth="180dp"
+            android:entries="@array/array_months"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:popupBackground="@color/colorPrimary"
+            android:spinnerMode="dropdown"
+            android:theme="@style/SpinnerItemStyle" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+</com.google.android.material.appbar.AppBarLayout>

@@ -101,6 +101,12 @@ object Room {
     const val roomCompiler = "androidx.room:room-compiler:$roomVersion"
 }
 
+object Groupie {
+    private const val groupieVersion = "2.10.0"
+    const val groupie = "com.github.lisawray.groupie:groupie:$groupieVersion"
+    const val groupieBinding = "com.github.lisawray.groupie:groupie-viewbinding:$groupieVersion"
+}
+
 object TestDependencies {
     private const val jUnitVersion = "4.13.2"
     const val jUnit = "junit:junit:$jUnitVersion"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryVariant"
+    android:background="@color/light_gray"
     tools:context=".fragment.MainFragment">
 
     <androidx.fragment.app.FragmentContainerView
@@ -12,7 +12,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginTop="?attr/actionBarSize"
         android:fitsSystemWindows="true"
         app:defaultNavHost="false" />
 
@@ -22,12 +22,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:elevation="0dp"
+        app:backgroundTint="@color/colorOnPrimary"
         app:fabAlignmentMode="end">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/mainBottomNavigation"
-            style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="120dp"
@@ -47,6 +46,11 @@
         app:layout_anchor="@id/mainBottomBar"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <include
+        layout="@layout/sppiner_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

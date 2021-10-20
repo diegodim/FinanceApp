@@ -6,12 +6,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/spacing_normal"
-    android:layout_marginTop="@dimen/spacing_small"
     android:layout_marginEnd="@dimen/spacing_normal"
+    android:layout_marginBottom="@dimen/spacing_normal"
     android:fitsSystemWindows="true"
-    app:cardBackgroundColor="@color/colorPrimary"
-    app:cardCornerRadius="@dimen/spacing_small"
-    app:cardElevation="0dp">
+    app:cardCornerRadius="@dimen/spacing_small">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,75 +21,58 @@
             style="@style/TextViewContent.Bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_normal"
-            android:layout_marginTop="@dimen/spacing_normal"
-            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
             android:elegantTextHeight="false"
             android:text="Pizza"
-            app:layout_constraintEnd_toStartOf="@+id/itemBudgetDeleteButton"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/itemBudgetValueTextView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/itemBudgetValueTextView"
             style="@style/TextViewContent.Bold.Tall"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_tiny"
+            android:layout_marginTop="@dimen/spacing_small"
             android:layout_marginEnd="@dimen/spacing_normal"
+            android:layout_marginBottom="@dimen/spacing_tiny"
             android:text="-R$ 59,99"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/itemBudgetTitleTextView"
-            app:layout_constraintTop_toBottomOf="@+id/itemBudgetTitleTextView" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/itemBudgetTypeTextView"
-            style="@style/TextViewContent"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_tiny"
-            android:layout_marginBottom="@dimen/spacing_normal"
-            android:drawablePadding="@dimen/spacing_small"
-            android:text="Comida"
-            app:drawableStartCompat="@drawable/ic_food"
             app:layout_constraintBottom_toTopOf="@+id/itemBudgetDivider"
-            app:layout_constraintEnd_toStartOf="@+id/itemBudgetDateTextView"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/itemBudgetTitleTextView"
-            app:layout_constraintTop_toBottomOf="@+id/itemBudgetValueTextView" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/itemBudgetDateTextView"
             style="@style/TextViewContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:elegantTextHeight="false"
             android:text="15/10/2021"
-            app:layout_constraintBaseline_toBaselineOf="@+id/itemBudgetTypeTextView"
-            app:layout_constraintEnd_toEndOf="@+id/itemBudgetValueTextView"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/itemBudgetTypeTextView" />
+            app:layout_constraintStart_toStartOf="@+id/itemBudgetTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/itemBudgetTitleTextView" />
 
         <View
             android:id="@+id/itemBudgetDivider"
             android:layout_width="match_parent"
             android:layout_height="@dimen/spacing_tiny"
-            android:background="@color/colorSecondary"
+            android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/itemBudgetDeleteButton"
-            android:layout_width="@dimen/spacing_large"
-            android:layout_height="@dimen/spacing_large"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:layout_marginEnd="@dimen/spacing_small"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:background="@drawable/icon_background"
+            android:padding="@dimen/spacing_tiny"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_delete"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:visibility="invisible" />
+            app:srcCompat="@drawable/ic_food" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -21,6 +21,10 @@ data class Budget(
                 add(Budget(2, "Luz", 200.0, BudgetType.Expense, BudgetCategory.Bills))
                 add(Budget(3, "Feira", 650.55, BudgetType.Expense, BudgetCategory.Purchases))
                 add(Budget(4, "Salário", 2000.0, BudgetType.Income, BudgetCategory.Salary))
+                add(Budget(5, "Salário", 2000.0, BudgetType.Income, BudgetCategory.Salary))
+                add(Budget(6, "Salário", 2000.0, BudgetType.Income, BudgetCategory.Salary))
+                add(Budget(7, "Salário", 2000.0, BudgetType.Income, BudgetCategory.Salary))
+                add(Budget(8, "Salário", 2000.0, BudgetType.Income, BudgetCategory.Salary))
             }
         }
     }

@@ -6,23 +6,33 @@
     </style>
     <style name="TextViewContent">
         <item name="android:elegantTextHeight">true</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/font_small</item>
     </style>
     <style name="TextViewContent.Bold" parent="TextViewContent">
         <item name="android:elegantTextHeight">true</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_normal</item>
     </style>
     <style name="TextViewContent.Bold.Tall" parent="TextViewContent.Bold">
         <item name="android:fontFamily">sans-serif-black</item>
-        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="android:textColor">@color/red</item>
         <item name="android:textSize">@dimen/font_large</item>
     </style>
 
     <style name="TextViewTitle" parent="TextViewContent.Bold.Tall">
         <item name="android:fontFamily">sans-serif-black</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">@dimen/font_huge</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/font_larger</item>
     </style>
-
+    <style name="SpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
 </resources>

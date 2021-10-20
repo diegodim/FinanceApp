@@ -2,8 +2,8 @@
 <resources>
 
     <!-- font sizes -->
-    <dimen name="font_huge">22sp</dimen>
-    <dimen name="font_larger">20sp</dimen>
+    <dimen name="font_huge">28sp</dimen>
+    <dimen name="font_larger">22sp</dimen>
     <dimen name="font_large">18sp</dimen>
     <dimen name="font_normal">14sp</dimen>
     <dimen name="font_small">12sp</dimen>

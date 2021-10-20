@@ -9,27 +9,26 @@ import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 
-abstract class BaseAdapter<T, V: BaseViewHolder<T>, B>: ListAdapter<T, V>(DiffCallback<T>()) {
+abstract class BaseAdapter<T, V: BaseViewHolder<T>, B: ViewBinding>: ListAdapter<T, V>(DiffCallback<T>()) {
 
-    abstract fun createViewHolderInstance(view: AdapterAsyncLayout<B>, viewType: Int, ): V
-    abstract val bindingInflater: (View) -> B
-    abstract val layoutId: Int
+    abstract fun createViewHolderInstance(view: AdapterAsyncLayout<B>): V
+    abstract fun initializeViewBinding(view: View): B
+    abstract val layoutId : Int
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): V {
-        val itemView = AdapterAsyncLayout(parent.context, bindingInflater)
+        val itemView = AdapterAsyncLayout(parent.context) { initializeViewBinding(it) }
         itemView.inflateAsync(layoutId)
 
-        return createViewHolderInstance(itemView, viewType)
+        return createViewHolderInstance(itemView)
     }
 
     override fun onBindViewHolder(holder: V, position: Int) {
         (holder.itemView as AsyncLayout).invokeWhenInflated {
-
             val animation: Animation = AnimationUtils.loadAnimation(
                 holder.itemView.context, android.R.anim.fade_in)
             holder.itemView.startAnimation(animation)
-
             holder.bind(getItem(position))
         }
     }

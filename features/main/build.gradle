@@ -20,6 +20,9 @@ dependencies {
 
     implementation(Shimmer.shimmer)
 
+    implementation(Groupie.groupie)
+    implementation(Groupie.groupieBinding)
+
     implementation(LifeCycle.viewModelRuntime)
     implementation(LifeCycle.viewModel)
     implementation(LifeCycle.liveData)

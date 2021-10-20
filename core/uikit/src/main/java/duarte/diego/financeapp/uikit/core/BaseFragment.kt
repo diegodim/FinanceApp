@@ -13,7 +13,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.facebook.shimmer.ShimmerFrameLayout
 import duarte.diego.financeapp.uikit.R
 import duarte.diego.financeapp.uikit.utils.extensions.gone
-import duarte.diego.financeapp.uikit.utils.extensions.setNavigationIcon
 import duarte.diego.financeapp.uikit.utils.extensions.visible
 import org.koin.core.component.KoinComponent
 
